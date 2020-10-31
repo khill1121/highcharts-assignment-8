@@ -1,0 +1,151 @@
+html
+  {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+  {
+  box-sizing: inherit;
+}
+
+body{
+  font-family: Georgia, serif;
+  background: #fff;
+  color: #000A2D;
+}
+
+
+#maincontainer {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-template-rows: repeat(6,auto);
+  grid-template-areas:
+          "header header header"
+          "text text text"
+          "container container para"
+          "source1 source1 source1"
+          "para2 container2 container2"
+          "source2 source2 source2";
+}
+
+header {
+  grid-area: header;
+  border-bottom: 3px solid #000A2D;
+  background: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+#text {
+  grid-area: text;
+  text-align: center;
+  padding: 2em;
+}
+
+#container {
+  grid-area: container;
+  width: 600px;
+  height: auto;
+  border: 2px solid #000A2D;
+  margin: auto;
+  padding:2em;
+}
+
+#container2 {
+  grid-area: container2;
+  width: 600px;
+  height: auto;
+  border: 2px solid #000A2D;
+  margin: auto;
+  padding:2em;
+}
+
+#para {
+  grid-area: para;
+  background: #000A2D;
+  color:#fff;
+  padding:2em;
+}
+
+#para2 {
+  grid-area: para2;
+  background: #000A2D;
+  color: #fff;
+  padding: 2em;
+}
+
+#source1 {
+  grid-area: source1;
+  padding: 0.5em;
+}
+
+#source2 {
+  grid-area: source2;
+  padding: 0.5em;
+  text-align:right;
+}
+
+@media (max-width: 600px) {
+  #maincontainer {
+    margin: 20em;
+    display: grid;
+    grid-template-columns: (1,1fr);
+    grid-template-rows: (8,auto);
+    grid-template-areas:
+      "header"
+      "text"
+      "container"
+      "source1"
+      "para"
+      "container2"
+      "source2"
+      "para2";
+    justify-content: center;
+
+header{
+  grid-area: header;
+  padding: 1em;
+}
+
+#text {
+  grid-area: text;
+  padding: 1em;
+  }
+
+#container {
+  grid-area: container;
+  width:100px;
+  height: auto;
+  padding: 1em;
+}
+
+#source1 {
+  grid-area: source1;
+  padding: 0.5em;
+}
+
+#para {
+  grid-area: para;
+  padding: 1em;
+
+}
+
+#container2{
+  grid-area: container2;
+  width:100px;
+  height: auto;
+  padding: 1em;
+}
+
+#source2{
+  grid-area: source2;
+  padding: 0.5em;
+}
+
+#para2{
+  grid-area: para2;
+  padding: 1em;
+}
+
+}
